@@ -25,3 +25,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: LeetCode Sync
         uses: joshcai/leetcode-sync@v1.3
+        with:
+          github-token: ${{ github.token }}
+          leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF }}
+          leetcode-session: ${{ secrets.LEETCODE_SESSION }}
+          destination-folder: codes
